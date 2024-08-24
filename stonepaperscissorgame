@@ -1,0 +1,72 @@
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class printf {
+    public static void main(String[] args) {
+        System.out.println("enter the number");
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        if(a==1){
+            System.out.println("you have choosen scissor");
+
+        }
+        if(a==2){
+            System.out.println("you have chossen  stone");
+
+        }
+        if(a==3){
+            System.out.println("you have choosen paper");
+
+        }
+        Random rn = new Random();
+        int b = rn.nextInt(1,4);
+        switch (b){
+            case 1 :
+            System.out.println("pc has choosen stone");
+            break;
+            case 2 : 
+            System.out.println("pc has chossen paper");
+            break;
+            case 3 : 
+            System.out.println("pc has choosen scissor ");
+            break;
+        }
+        if(a==1 && b==1){
+            System.out.println("pc won");
+
+        }
+        else if(a==1 && b==2){
+            System.out.println("you won");
+
+        }
+        else if(a==1 && b==3){
+            System.out.println("draw");
+        }
+        else if(a==2 && b==1){
+            System.out.println("draw");
+        }
+        else if(a==2 && b==2){
+            System.out.println("pc won");
+        }
+        else if (a==2 && b==3){
+            System.out.println("you won");
+        }
+        else if(a==3 && b==1){
+            System.out.println("pc won");
+        }
+        else if(a==3 && b==2){
+            System.out.println("draw");
+        }
+        else if(a==3 && b==3){
+            System.out.println("you won");
+        }
+        else{
+            System.out.println("game can not be played");
+        }
+
+    }
+    
+}
+
+
